@@ -1,0 +1,72 @@
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--cardGray);
+  text-align: center;
+  padding: 1.7em 0;
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  height: 4px;
+  display: block;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.card.facebook::before {
+  background: var(--facebook);
+}
+.card.twitter::before {
+  background: var(--twitter);
+}
+.card.instagram::before {
+  background: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%) 0%,
+    hsl(329, 70%, 58%) 100%
+  );
+}
+.card.youtube::before {
+  background: var(--youTube);
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cardTitle);
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.card-title img {
+  margin-right: 5px;
+}
+.card-followers-number {
+  font-size: 50px;
+  font-weight: 700;
+}
+.card-followers-title {
+  display: block;
+  text-transform: uppercase;
+  color: var(--cardTitle);
+  letter-spacing: 5px;
+  font-size: 0.75em;
+}
+
+.card-today {
+  margin-top: 20px;
+  color: var(--lime-green);
+  font-size: 0.7em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-today img {
+  margin-right: 5px;
+}
